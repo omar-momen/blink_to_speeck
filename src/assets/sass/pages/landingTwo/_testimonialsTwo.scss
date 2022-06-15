@@ -1,0 +1,216 @@
+.testimonials_two {
+    position: relative;
+    padding-top: 60px;
+
+    .title_wrapper {
+        @include flexCenterAlignment;
+        h2 {
+            font-size: 38px;
+            color: var(--theme_text_clr);
+            font-family: $bold_font;
+            span {
+                color: var(--main_theme_clr);
+                font-family: $bold_font;
+            }
+        }
+    }
+
+    .carousel_wrapper {
+        padding-block: 20px;
+        .owl-carousel  {
+            position: relative;
+            .owl-stage {
+                .owl-item {
+                    .testimonial_card_wrapper {
+                        .testimonial_image {
+                            position: relative;
+                            min-height: 560px;
+                            background-image: linear-gradient(45deg, var(--main_theme_clr), var(--light_main_theme_clr), var(--soft_main_theme_clr));
+                            @include customBorderRadius(0, 0, 80px, 0);
+                            overflow: hidden;
+                            img {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                width: 85%;
+                                height: 560px;
+                                object-fit: cover;
+                            }
+                        }
+
+                        .testimonial_body_card {
+                            padding: 60px;
+
+                            .body_icon {
+                                position: relative;
+                                svg, 
+                                i {
+                                    color: var(--light_main_theme_clr);
+                                    font-size: 50px;
+                                }
+
+                                &::before {
+                                    content: "\f10d";
+                                    font-family: "Font Awesome 5 Free"; 
+                                    font-weight: 900; 
+                                    position: absolute;
+                                    top: -120%;
+                                    left: -45px;
+                                    font-size: 80px;
+                                    color: var(--light_main_theme_clr);
+                                    opacity: 0.2;
+                                }
+                            }
+
+                            .body_text_wrapper {
+                                padding: 25px;
+                                @include textWraper;
+                                font-size: 22px;
+                                line-height: 1.3;
+                            }
+
+                            .client_info {
+                                text-align: end;
+                                .wrapper {  
+                                    text-align: center;
+                                    .name {
+                                        margin-bottom: 0;
+                                        color: var(--theme_text_clr);
+                                        font-size: 26px;
+                                        font-family: $bold_font;
+                                    }
+                                    .role {
+                                        color: var(--main_theme_clr);
+                                        font-size: 24px;
+                                        font-family: $medium_font;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .owl-nav {
+                position: absolute;
+                bottom: 0;
+                left: -120px;
+                width: 100%;
+                .owl-prev,
+                .owl-next {
+                    background-color: var(--mid_main_theme_clr);
+                    margin: 0;
+                    padding: 18px 25px;
+                    color: var(--mid_main_theme_clr);
+                    @include transitioning(0.4s);
+                    &:hover {
+                        background-color: var(--main_theme_clr);
+                        color: var(--main_theme_clr);
+                    }
+                }
+
+                .owl-prev {
+                    @include customBorderRadius(10px, 0, 0, 10px);
+                    &::before {
+                        content: "\f104";
+                        font-family: "Font Awesome 5 Free"; 
+                        font-weight: 900; 
+                        font-size: 18px;
+                        color: var(--white_clr);
+                        margin-left: 12px; 
+                    }
+                }
+                
+                .owl-next {
+                    @include customBorderRadius(0, 10px, 10px, 0);
+                    &::before {
+                        content: "\f105";
+                        font-family: "Font Awesome 5 Free"; 
+                        font-weight: 900; 
+                        font-size: 18px;
+                        color: var(--white_clr);
+                        margin-left: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    // START:: MEDIA QUERIES
+    @media ( max-width: 767px ) {
+        padding-top: 40px;
+        .title_wrapper {
+            h2 {
+                font-size: 35px;
+                margin: 0;
+            }
+        }
+
+        .carousel_wrapper {
+            .owl-carousel  {
+                .owl-stage {
+                    .owl-item {
+                        .testimonial_card_wrapper {
+                            .testimonial_image {
+                                margin-bottom: 20px;
+                                min-height: 350px;
+                                @include customBorderRadius(0, 0, 80px, 0);
+                                img {
+                                    width: 75%;
+                                    height: 350px;
+                                }
+                            }
+    
+                            .testimonial_body_card {
+                                padding: 10px;
+                                .body_icon {
+                                    svg, 
+                                    i {
+                                        font-size: 40px;
+                                    }
+    
+                                    &::before {
+                                        top: -70%;
+                                        left: 15px;
+                                        font-size: 50px;
+                                    }
+                                }
+    
+                                .body_text_wrapper {
+                                    padding: 0;
+                                    font-size: 22px;
+                                    line-height: 1.2;
+                                    text-align: center;
+                                    margin-bottom: 10px;
+                                }
+    
+                                .client_info {
+                                    text-align: end;
+                                    .wrapper {  
+                                        text-align: center;
+                                        .name {
+                                            margin-bottom: 0;
+                                            color: var(--theme_text_clr);
+                                            font-size: 28px;
+                                            font-family: $bold_font;
+                                        }
+                                        .role {
+                                            color: var(--main_theme_clr);
+                                            font-size: 24px;
+                                            font-family: $medium_font;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .owl-nav {
+                    display: none;
+                }
+            }
+        }
+    }
+    // END:: MEDIA QUERIES
+}

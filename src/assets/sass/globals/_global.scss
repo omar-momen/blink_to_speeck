@@ -1,0 +1,179 @@
+// START:: GLOBAL STYES
+* {
+    font-family: $regular_font;
+    outline: none;
+    @include boxSizing;
+    @include colorTransitioning(0.4s);
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: var(--theme_bg_clr);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--main_theme_clr);
+        border: 2px solid var(--theme_bg_clr);
+        @include borderRadius(15px);
+    }
+}
+
+html {
+    overflow-y: auto !important;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+
+    // START:: THEME GLOBAL STYLES
+    .theme--light {
+        &.v-application {
+            background: var(--theme_bg_clr);
+            color: var(--theme_text_clr);
+        }
+    }
+    // END:: THEME GLOBAL STYLES
+
+    // START:: FREE QUOTE BUTTON STYLE
+    .landing_one {
+        .free_quote_button_wrapper {
+            position: absolute;
+            top: 85vh;
+            right: 15px;
+            width: 60px;
+            height: 60px;
+            background-color: var(--secondary_theme_clr);
+            transform: rotate(-45deg);
+            @include flexCenterAlignment;
+            @include borderRadius(10px);
+            button {
+                transform: rotate(45deg);
+            }
+        }
+        // START:: MEDIA QUERIES
+        @media ( max-width: 767px ) {
+            .free_quote_button_wrapper {
+                bottom: 30px;
+                width:50px;
+                height:50px;
+                button {
+                    img {
+                        width:30px;
+                        height:30px;
+                    }
+                }
+            }
+        }
+        // END:: MEDIA QUERIES
+    }
+
+    .landing_two {
+        position: relative;
+        .free_quote_button_wrapper {
+            position: absolute;
+            top: calc(100vh - 61px);
+            right: 0;
+            width: max-content;
+            button {
+                padding: 8px 35px;
+                    font-size: 26px;
+                font-family: $medium_font;
+                background-color: var(--mid_main_theme_clr);
+                @include flexCenterAlignment;
+                @include customBorderRadius(15px, 0, 0, 0);
+            }
+        }
+        // START:: MEDIA QUERIES
+        @media ( max-width: 767px ) {
+            .free_quote_button_wrapper {
+                button {
+                    padding: 8px 25px;
+                }
+            }
+        }
+        // END:: MEDIA QUERIES
+    }
+
+    .landing_three {
+        position: relative;
+        .free_quote_button_wrapper {
+            position: absolute;
+            top: calc(100vh - 78px);
+            right: -37px;
+            transform: rotate(-90deg);
+            button {
+                position: relative;
+                padding: 4px 8px;
+                font-size: 21px;
+                font-family: $medium_font;
+                background-color: var(--mid_main_theme_clr);
+                @include flexCenterAlignment;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -17%;
+                    left: 0;
+                    display: block;
+                    width: 100%;
+                    height: 5px;
+                    background-color: var(--mid_main_theme_clr);
+                }
+            }
+        }
+        // START:: MEDIA QUERIES
+        @media ( max-width: 767px ) {
+            .free_quote_button_wrapper {
+                top: calc(100vh - 66px);
+                right: -34px;
+                button {
+                    padding: 0 5px;
+                    font-size: 19px;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: -27%;
+                        left: 0;
+                        display: block;
+                        width: 100%;
+                        height: 5px;
+                        background-color: var(--mid_main_theme_clr);
+                    }
+                }
+            }
+        }
+        // END:: MEDIA QUERIES
+    }
+    // END:: FREE QUOTE BUTTON STYLE
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -moz-box-shadow: 0 0 0 30px var(--theme_inputs_clr) inset !important;
+    -o-box-shadow: 0 0 0 30px var(--theme_inputs_clr) inset !important;
+    -webkit-box-shadow: 0 0 0 30px var(--theme_inputs_clr) inset !important;
+    box-shadow: 0 0 0 30px var(--theme_inputs_clr) inset !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+// input[type=text], textarea {
+//     text-align: start;
+//     unicode-bidi: plaintext;
+// }
+// END:: GLOBAL STYES

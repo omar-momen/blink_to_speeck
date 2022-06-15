@@ -1,0 +1,86 @@
+{
+    "iziToastConfigs": {
+        "position": "bottomRight",
+        "dir": "false"
+    },
+
+    "NAVBAR": {
+        "home": "Home",
+        "about_us": "About Us",
+        "services": "Services",
+        "testimonials": "Testimonials",
+        "customers": "Customers",
+        "contact_us": "Contact Us",
+        "english": "English",
+        "arabic": "Arabic"
+    },
+
+    "TOOLTIPS": {
+        "search": "Search",
+        "change_theme": "Change Theme"
+    },
+
+    "FOOTER": {
+        "home": "Home",
+        "about_us": "About Us",
+        "services": "Services",
+        "testimonials": "Testimonials",
+        "customers": "Customers"
+    },
+
+    "TITLES": {
+        "about_us": "About Us",
+        "about_us_html": "<h2>Great <span>Translation</span> Agency Build The Best Experience</h2>",
+        "our_services": "Our Services",
+        "our_services_html": "<h2>What <span>Service</span> We Provide To Customers</h2>",
+        "what_clients_say": "What Our Clients Say",
+        "what_clients_say_html": "<h2>What Our <span>Clients</span> Say </h2>",
+        "our_customers": "Our Customers",
+        "our_customers_html": "<h2>Our <span>Customers</span> </h2>",
+        "contact_us": "Contact Us",
+        "contact_us_html": "<h2> <span>Contact</span> Us</h2>",
+        "essential_links": "Essential Links",
+        "services": "Services",
+        "free_quote": "Get Free Quote",
+        "translation": "TRANSLATION",
+        "professional_translation_service": "Professional Translation Service Offer",
+        "our_language": "Our language",
+        "industries_we_cover": "Industries We Cover"
+    },
+
+    "BUTTONS": {
+        "start_now": "Start Now",
+        "send": "Send",
+        "request_quote": "Request A Quote",
+        "free_quote": "Free Quote"
+    },
+
+    "TABS": {
+    },
+
+    "PLACEHOLDERS": {
+        "search": "Search",
+        "name": "Name",
+        "email": "Email",
+        "message": "Write Message",
+        "services": "Services",
+        "lang_from": "Language From",
+        "lang_to": "Language To",
+        "phone": "Phone Number",
+        "company_name": "Company Name"
+    },
+
+    "VALIDATION": {
+        "name": "Name Can't Be Empty",
+        "companyName": "Company Name Can't Be Empty",
+        "email": "Email Can't Be Empty",
+        "phone": "Phone Can't Be Empty",
+        "message": "Message Can't Be Empty",
+        "service": "Service Can't Be Empty",
+        "lang": "You Must Select A Language"
+    },
+
+    "MESSAGES": {
+        "sent_successfully": "تم الإرسال بنجاح"
+    }
+}

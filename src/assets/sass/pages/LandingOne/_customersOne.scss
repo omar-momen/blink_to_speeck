@@ -1,0 +1,54 @@
+.our_customers_one {
+    padding-block: 60px;
+    .title_wrapper {
+        @include headerStyleOne;
+        margin-bottom: 60px;
+        h2 {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        span {
+            left: 44%;
+            transform: translateX(-44%) rotate(55deg);
+        }
+    }
+
+    .customers_carousel_wrapper {
+        padding-block: 40px;
+        background-color: var(--light_main_theme_clr);
+
+        .customer_logo_wrapper {
+            img {
+                width: 150px;
+                height: 120px;
+                object-fit: contain;
+                filter: grayscale(70%);
+                opacity: 0.6;
+                @include transitioning(0.4s);
+            }
+
+            &:hover {
+                img {
+                    filter: grayscale(0%);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    // START:: MEDIA QUERIES
+    @media ( max-width: 767px ) {
+        .title_wrapper {
+            margin-bottom: 0;
+            h2 {
+                left: 130px;
+                font-size: 35px;
+            }
+            span {
+                left: 45px;
+            }
+        }
+    }
+    // END:: MEDIA QUERIES
+}

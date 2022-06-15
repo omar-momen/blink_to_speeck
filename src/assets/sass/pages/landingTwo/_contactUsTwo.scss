@@ -1,0 +1,71 @@
+.contact_us_two {
+    position: relative;
+    padding-bottom: 60px;
+    isolation: isolate;
+
+    .contact_form_wrapper {
+        .title_wrapper {
+            @include flexCenterAlignment;
+            h2 {
+                font-size: 38px;
+                color: var(--theme_text_clr);
+                font-family: $bold_font;
+                span {
+                    color: var(--main_theme_clr);
+                    font-family: $bold_font;
+                }
+            }
+        }
+
+        input, 
+        textarea {
+            background-color: var(--theme_bg_clr)
+        }
+        button {
+            width: 100%;
+            @include borderRadius(10px);
+        }
+
+        .subtitle {
+            @include textWraper;
+            text-align: center;
+            line-height: 1.2;
+            font-size: 22px;
+        }
+    }
+
+    .section_bg_shape {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 400px;
+        background-image: url("../media/images/landing_two/contact_bg_shape.svg");
+        background-position: center;
+        background-size: 100%;
+        opacity: 0.5;
+        z-index: -1;
+    }
+
+    // START:: MEDIA QUERIES
+    @media ( max-width: 767px ) {
+        padding: 0;
+        .contact_form_wrapper {
+            .title_wrapper {
+                h2 {
+                    font-size: 35px;
+                    margin: 0;
+                }
+            }
+
+            .subtitle {
+                font-size: 18px;
+            }
+        }
+
+        .section_bg_shape {
+            height: 250px;
+            background-size: cover;
+        }
+    }
+    // END:: MEDIA QUERIES
+}

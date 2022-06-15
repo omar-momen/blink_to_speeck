@@ -1,0 +1,62 @@
+.tabs_wrapper {
+    .v-sheet {
+        &.v-card {
+            &:not(.v-sheet--outlined) {
+                box-shadow: none !important;
+            }
+        }
+
+        .v-tabs {
+            padding-block: 15px 0;
+            background: var(--theme_bg_clr) !important;
+            .v-item-group {
+                background: var(--theme_bg_clr) !important;
+                .v-slide-group__wrapper {
+                    .v-slide-group__content {
+                        justify-content: center;
+                        align-items: center;
+                        column-gap: 80px;
+                        .v-tabs-slider-wrapper {
+                            display: none;
+                        }
+                        .v-tab {
+                            padding-inline: 0;
+                            padding-block: 8px;
+                            color: var(--light_gray_clr);
+                            font-size: 20px;
+                            font-family: $bold_font;
+                            border-bottom: 2px solid transparent;
+
+                            &::before,
+                            &::after {
+                                display: none !important;
+                            }
+
+                            &.v-tab--active {
+                                color: var(--main_theme_clr);
+                                background-color: var(--theme_bg_clr);
+                                border-color: var(--main_theme_clr);
+                                &::before,
+                                &::after {
+                                    display: none !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .v-window {
+            .v-window__container {
+                .v-window-item {
+                    .v-card {
+                        background: var(--theme_bg_clr) !important;
+                        padding: 25px;
+                        @include borderRadius(0);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,322 @@
+body {
+    &[dir="rtl"] {
+        // START:: GLOBAL STYLES
+        footer {
+            .links_wrapper {
+                .wrapper {
+                    h4 {
+                        &::after {
+                            left: auto;
+                            right: 0;
+                        }
+                    }
+
+                    .footer_contact_data_wrapper {
+                        .footer_contact_item {
+                            .text {
+                                direction: ltr;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // END:: GLOBAL STYLES
+
+        // START:: LANDING ONE RTL STYLES
+        .landing_one {
+            // ============ START:: HERO SECTION
+            .hero_section_one {
+                .hero_text_wrapper {
+                    direction: rtl;
+                    @include verticalFlexStartAlignment;
+                    padding-inline-start: 75px;
+                    .start_btn_wrapper {
+                        span {
+                            top: 0;
+                            left: -115px;
+                        }
+                    }
+                }
+            }
+            // ============ END:: HERO SECTION
+
+            // ============ START:: ABOUT SECTION
+            .about_section_one {
+                .title_wrapper {
+                    h2 {
+                        left: auto;
+                        right: 0;
+                    }
+                    span {
+                        left: auto;
+                        right: -15px;
+                    }
+                }
+            
+                .section_image_wrapper {
+                    transform: translate(0, -130px);
+                }
+            }
+            // ============ END:: ABOUT SECTION
+
+            // ============ START:: SERVICES SECTION
+            .our_services_one {
+                .title_wrapper {
+                    span {
+                        left: auto;
+                        right: 44%;
+                        transform: translateX(0) rotate(55deg);
+                    }
+                }
+            }
+            // ============ END:: SERVICES SECTION
+
+            // ============ START:: TESTIMONIALS SECTION
+            .testimonials_one {
+                .title_wrapper {
+                    h2 {
+                        left: auto;
+                        right: 0;
+                    }
+                    span {
+                        left: auto;
+                        right: -15px;
+                    }
+                }
+            }
+            // ============ END:: TESTIMONIALS SECTION
+            
+            // ============ START:: CUSTOMERS SECTION
+            .our_customers_one {
+                .title_wrapper {
+                    span {
+                        left: auto;
+                        right: 44%;
+                    }
+                }
+            }
+            // ============ END:: CUSTOMERS SECTION
+
+            // ============ START:: CONTACT US SECTION
+            .contact_us_one {
+                .section_image_wrapper {
+                    transform: translateX(100px);
+                    &::before {
+                        left: auto;
+                        right: -70px;
+                    }
+            
+                    &::after {
+                        left: -40px;
+                        right: auto;
+                    }
+            
+                    img {
+                        left: auto;
+                        right: 0;
+                    }
+                }
+
+                .contact_form_wrapper {
+                    .title_wrapper {
+                        span {
+                            left: auto;
+                            right: 40%;
+                            transform: translateX(44%) rotate(55deg);
+                        }
+                    }
+                }
+            }
+            // ============ END:: CONTACT US SECTION
+            
+        }
+        // END:: LANDING ONE RTL STYLES
+
+        // START:: LANDING TWO RTL STYLES
+        .landing_two {
+            // ============ START:: MODAL BUTTON
+            .free_quote_button_wrapper {
+                top: calc(100vh - 58px);
+                left: 0;
+                right: auto;
+                button {
+                    padding: 8px 25px;
+                    font-size: 28px;
+                    @include customBorderRadius(0, 15px, 0, 0);
+                }
+            }
+            // ============ END:: MODAL BUTTON
+
+            // ============ START:: HERO SECTION
+            .hero_section_two {
+                .hero_image_wrapper {
+                    left: -5%;
+                    right: auto;
+                    img {
+                        left: 0;
+                        right: auto;
+                    }
+                    &::before {
+                        left: 20px;
+                        right: auto;
+                    }
+                    &::after {
+                        left: 0;
+                        right: auto;
+                    }
+                }
+            }
+            // ============ END:: HERO SECTION
+
+            // ============ START:: TESTIMONIALS SECTION
+            .testimonials_two {
+                .carousel_wrapper {
+                    .owl-carousel  {
+                        .owl-stage {
+                            .owl-item {
+                                .testimonial_card_wrapper {
+                                    .testimonial_body_card {
+                                        .body_icon {
+                                            &::before {
+                                                left: right;
+                                                right: 15px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // ============ END:: TESTIMONIALS SECTION
+        }
+        // END:: LANDING TWO RTL STYLES
+
+        // START:: LANDING THREE RTL STYLES
+        .landing_three {
+            // ============ START:: MODAL BUTTON
+            .free_quote_button_wrapper {
+                top: calc(100vh - 82px);
+                left: -35px;
+                right: auto;
+                transform: rotate(90deg);
+                button {
+                    font-size: 25px;
+                }
+                // START:: MEDIA QUERIES
+                @media ( max-width: 767px ) {
+                    top: calc(100vh - 65px);
+                    left: -32px;
+                    right: auto;
+                    button {
+                        font-size: 18px;
+                    }
+                }
+                // END:: MEDIA QUERIES
+            }
+            // ============ END:: MODAL BUTTON
+
+            // ============ START:: SERVICES SECTION
+            .our_services_three {
+                .title_wrapper,
+                .text_wrapper {
+                    padding-inline-start: 25px;
+                }
+            }
+            // ============ END:: SERVICES SECTION
+
+            // ============ START:: TESTIMONIALS SECTION
+            .testimonials_three {
+                .testimonial_images_wrapper {
+                    &::before {
+                        left: auto;
+                        right: 25%;
+                    }
+                    .main_image_wrapper {
+                        left: auto;
+                        right: 50%;
+                    }
+                    .thumbnail_wrapper {
+                        &:first-of-type {
+                            left: auto;
+                            right: 100px;
+                        }
+                        &:nth-of-type(2) {
+                            left: auto;
+                            right: -35px;
+                        }
+                        &:nth-of-type(3) {
+                            left: auto;
+                            right: -35px;
+                        }
+                        &:last-of-type {
+                            left: auto;
+                            right: 100px;
+                        }
+                    }
+                }
+        
+                .testimonial_body_card {
+                    .body_icon {
+                        &::before {
+                            left: right;
+                            right: 15px;
+                        }
+                    }
+                }
+
+                // START:: MEDIA QUERIES
+                @media ( max-width: 767px ) {
+                    .testimonial_card_wrapper {
+                        .testimonial_images_wrapper {
+                            .main_image_wrapper {
+                                transform: translateY(-50%) translateX(10%);
+                            }
+
+                            .thumbnail_wrapper {
+                                &:first-of-type {
+                                    left: auto;
+                                    right: 45px;
+                                }
+                                &:nth-of-type(2) {
+                                    left: auto;
+                                    right: -35px;
+                                }
+                                &:nth-of-type(3) {
+                                    left: auto;
+                                    right: -35px;
+                                }
+                                &:last-of-type {
+                                    left: auto;
+                                    right: 45px;
+                                }
+                            }
+                        }
+                    }
+                }
+                // END:: MEDIA QUERIES
+            }
+            // ============ END:: TESTIMONIALS SECTION
+
+            // ============ START:: CONTACT US SECTION
+            .contact_us_three {
+                button {
+                    .icon {
+                        transform: translateX(0) rotate(180deg);
+                    }
+        
+                    &:hover {
+                        .icon {
+                            transform: translateX(-8px) rotate(180deg);
+                        }
+                    }
+                }
+            }
+            // ============ END:: CONTACT US SECTION
+            
+        }
+        // END:: LANDING THREE RTL STYLES
+    }
+}

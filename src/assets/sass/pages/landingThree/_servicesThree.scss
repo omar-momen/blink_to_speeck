@@ -1,0 +1,153 @@
+.our_services_three {
+    padding-block: 60px;
+
+    .title_wrapper {
+        width: 95%;
+        @include flexStartAlignment;
+        h2 {
+            font-size: 38px;
+            color: var(--theme_text_clr);
+            font-family: $bold_font;
+            span {
+                color: var(--main_theme_clr);
+                font-family: $bold_font;
+            }
+        }
+    }
+
+    .text_wrapper {
+        width: 95%;
+        @include textWraper;
+        color: var(--mid_gray_clr);
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    .section_cards_wrapper {
+        .row {
+            .col-lg-6 {
+                &:nth-child(odd) {
+                    .service_card {
+                        transform: translateY(-30px);
+                    }
+                }
+
+                &:nth-child(even) {
+                    .service_card {
+                        transform: translateY(30px);
+                    }
+                }
+            }
+        }
+
+        .service_card {
+            min-height: 200px;
+            padding: 30px 25px;
+            @include flexCenterAlignment;
+            flex-direction: column;
+            row-gap: 20px;
+            background-color: var(--theme_bg_clr);
+            @include borderRadius(30px);
+            @include simpleShadow;
+            @include transitioning(0.5s);
+            .card_body {
+                .card_title {
+                    color: var(--theme_text_clr);
+                    font-size: 35px;
+                    font-family: $bold_font;
+                    margin-bottom: 10px;
+                    @include transitioning(0.7s);   
+                }
+                .text {
+                    @include textWraper;
+                    line-height: 1.2;
+                    @include transitioning(0.7s);
+                }
+            }
+
+            &:hover {
+                background-color: var(--mid_main_theme_clr);
+                .card_icon {
+                    img {
+                        filter: brightness(0) invert(100%);
+                    }
+                }
+                .card_body {
+                    .card_title {
+                        color: var(--white_clr);
+                    }
+                    .text {
+                        color: var(--white_clr);
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+
+    // START:: MEDIA QUERIES
+    @media ( max-width: 767px ) {
+        padding-block: 40px;
+
+        .title_wrapper {
+            h2 {
+                font-size: 35px;
+                margin: 0;
+            }
+        }
+
+        .text_wrapper {
+            width: 100%;
+            font-size: 22px;
+            margin-top: 25px;
+        }
+
+        .section_cards_wrapper {
+            margin-bottom: 15px;
+            .row {
+                .col-lg-6 {
+                    &:nth-child(odd) {
+                        .service_card {
+                            transform: translateY(0);
+                        }
+                    }
+    
+                    &:nth-child(even) {
+                        .service_card {
+                            transform: translateY(0);
+                        }
+                    }
+                }
+            }
+
+            .service_card {
+                min-height: 200px;
+                padding: 15px;
+                @include flexCenterAlignment;
+                flex-direction: column;
+                row-gap: 10px;
+                @include borderRadius(10px);
+                .card_icon {
+                    img {
+                        width: 50px;
+                        height: 50px;
+                    }
+                }
+
+                .card_body {
+                    .card_title {
+                        font-size: 35px;
+                        font-family: $medium_font;
+                    }
+
+                    .text {
+                        line-height: 1.2;
+                        text-align: start;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    // END:: MEDIA QUERIES
+}

@@ -1,0 +1,59 @@
+.our_services_one {
+    padding-bottom: 60px;
+    .title_wrapper {
+        @include headerStyleOne;
+        h2 {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        span {
+            left: 44%;
+            transform: translateX(-44%) rotate(55deg);
+        }
+    }
+
+    .service_card_wrapper {
+        padding: 15px 8px;
+        text-align: center;
+        margin-block: 15px;
+        border: 2px solid var(--lighter_gray_clr);  
+        min-height: 200px;
+        @include flexCenterAlignment;
+        flex-direction: column;
+        @include borderRadius(15px);
+        @include simpleShadow();
+
+        .card_header {
+            margin-block: 10px;
+            font-size: 30px;
+            font-family: $bold_font;
+            color: var(--theme_text_clr);        
+        }
+
+        .card_text {
+            @include textWraper;
+            text-align: center;
+            line-height: 1.2;
+        }
+    }
+
+    // START:: MEDIA QUERIES
+    @media ( max-width: 767px ) {
+        padding-block: 60px;
+        .title_wrapper {
+            h2 {
+                width: 100%;
+                left: 15px;
+                transform: translateX(0);
+                font-size: 35px;
+            }
+    
+            span {
+                left: 0;
+                transform: translateX(0) rotate(55deg);
+            }
+        }
+    }
+    // END:: MEDIA QUERIES
+}

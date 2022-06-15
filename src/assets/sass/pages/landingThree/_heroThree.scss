@@ -1,0 +1,126 @@
+.hero_section_three {
+    position: relative;
+    min-height: 100vh;
+    @include flexCenterAlignment;
+    overflow: hidden;
+
+    .hero_text_wrapper {
+        .hero_title {
+            margin: 0;
+            color: var(--theme_text_clr);
+            font-size: 38px;
+            font-family: $bold_font;
+            width: 80%;
+            line-height: 1;
+        }
+
+        .text_wrapper {
+            margin-block: 40px;
+            @include textWraper;
+            color: var(--mid_gray_clr);
+            font-family: $medium_font;
+            width: 80%;
+            font-size: 20px;
+            line-height: 1.4;
+            opacity: 0.7;
+        }
+
+        .translation_form_wrapper {
+            position: relative;
+            .start_btn {
+                position: absolute;
+                top: 0;
+                left: 0;
+                @include simpleButtonStyle;
+                margin-top: 0;
+                z-index: 2;
+                &:hover {
+                    background-position: 100%;
+                    color: var(--white_clr);
+                } 
+            }
+            span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                font-size: 70px;
+                font-family: $bold_font;
+                color: var(--white_clr);
+                opacity: 0.2;
+                margin-top: -29px;
+                margin-inline-start: 40px;
+            }
+        }
+    }
+
+    .hero_image_wrapper {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .mouse_wrapper {
+        position: absolute;
+        bottom: 30px;
+        left: 0;
+        width: 100%;
+        @include flexCenterAlignment;
+
+        .scroll_btn {
+            animation: mouse_movement 1s linear infinite;
+            animation-direction: alternate;
+        }
+    }
+
+    // START:: MEDIA QUERIES
+    @media ( max-width: 767px ) {
+        background-size: 75%;
+        text-align: center;
+
+        .hero_text_wrapper {
+            margin-top: 20px;
+            .hero_title {
+                font-size: 30px;
+                width: 100%;
+            }
+    
+            .text_wrapper {
+                margin-block: 10px 20px;
+                font-size: 20px;
+                width: 100%;
+                text-align: center;
+            }
+    
+            .translation_form_wrapper {
+                display: none;
+            }
+        }
+    
+        .hero_image_wrapper {
+            margin-top: 60px;
+            img {
+                width: 85%;
+                height: 90%;
+            }
+        }
+
+        .mouse_wrapper {
+            bottom: 20px;
+        }
+    }
+    // END:: MEDIA QUERIES
+}
+
+// START:: ANIMATIONS
+@keyframes mouse_movement {
+    from {
+        transform: translateY(10px);
+    }
+    
+    to {
+        transform: translateY(-10px);
+    }
+};
+// START:: ANIMATIONS

@@ -1,0 +1,88 @@
+// ======== START:: IMPORTING VARIABLES ======== //
+@import "sassHelpers/_variables.scss";
+// ======== END:: IMPORTING VARIABLES ======== //
+
+// ======== START:: IMPORTING MIXINS ======== //
+@import "sassHelpers/_mixins.scss";
+// ======== END:: IMPORTING MIXINS ======== //
+
+// ======== START:: IMPORTING FONTS ======== //
+@import "fonts/_fonts.scss";
+// ======== END:: IMPORTING FONTS ======== //
+
+// ======== START:: IMPORTING ANIMATIONS ======== //
+@import "globals/_animation.scss";
+// ======== END:: IMPORTING ANIMATIONS ======== //
+
+// ======== START:: IMPORTING GLOBAL STYLES ======== //
+@import "globals/_formInputs.scss";
+@import "globals/_emojisPicker.scss";
+@import "globals/_global.scss";
+// ======== END:: IMPORTING GLOBAL STYLES ======== //
+
+// ======== START:: IMPORTING LAYOUTS STYLES ======== //
+// @import "pages/landingOne/layouts/_theHeader.scss";
+// @import "pages/landingOne/layouts/_theFooter.scss";
+// ======== END:: IMPORTING LAYOUTS STYLES ======== //
+
+// ======== START:: IMPORTING STRUCTURE STYLES ======== //
+@import "components/structure/_slider.scss";
+@import "components/structure/_tabs.scss";
+// ======== END:: IMPORTING STRUCTURE STYLES ======== //
+
+// ======== START:: IMPORTING UI COMPONENTS STYLES ======== //
+@import "components/ui/_loaders.scss";
+@import "components/ui/_baseModal.scss";
+// ======== END:: IMPORTING UI COMPONENTS STYLES ======== //
+
+// ======== START:: IMPORTING MODALS COMPONENTS STYLES ======== //
+@import "components/modals/_freeQuoteFormModal.scss";
+// ======== END:: IMPORTING MODALS COMPONENTS STYLES ======== //
+
+// START:: IMPORTING START NOW COMPONENT STYLE
+@import "pages/StartNow/_startNow.scss";
+// END:: IMPORTING START NOW COMPONENT STYLE
+
+// ======== START:: IMPORTING LANDING ONE COMPONENTS STYLES ======== //
+//  START:: IMPORTING LAYOUTS STYLES  //
+@import "pages/landingOne/layouts/_theHeader.scss";
+@import "pages/landingOne/layouts/_theFooter.scss";
+//  END:: IMPORTING LAYOUTS STYLES  //
+@import "pages/landingOne/_heroOne.scss";
+@import "pages/landingOne/_aboutOne.scss";
+@import "pages/landingOne/_servicesOne.scss";
+@import "pages/landingOne/_testimonialsOne.scss";
+@import "pages/landingOne/_customersOne.scss";
+@import "pages/landingOne/_contactUsOne.scss";
+// ======== END:: IMPORTING LANDING ONE COMPONENTS STYLES ======== //
+
+// ======== START:: IMPORTING LANDING TWO COMPONENTS STYLES ======== //
+//  START:: IMPORTING LAYOUTS STYLES  //
+@import "pages/landingTwo/layouts/_theHeader.scss";
+@import "pages/landingTwo/layouts/_theFooter.scss";
+//  END:: IMPORTING LAYOUTS STYLES  //
+@import "pages/landingTwo/_heroTwo.scss";
+@import "pages/landingTwo/_aboutTwo.scss";
+@import "pages/landingTwo/_servicesTwo.scss";
+@import "pages/landingTwo/_testimonialsTwo.scss";
+@import "pages/landingTwo/_customersTwo.scss";
+@import "pages/landingTwo/_contactUsTwo.scss";
+// ======== END:: IMPORTING LANDING TWO COMPONENTS STYLES ======== //
+
+// ======== START:: IMPORTING LANDING THREE COMPONENTS STYLES ======== //
+//  START:: IMPORTING LAYOUTS STYLES  //
+@import "pages/landingThree/layouts/_theHeader.scss";
+@import "pages/landingThree/layouts/_theFooter.scss";
+//  END:: IMPORTING LAYOUTS STYLES  //
+@import "pages/landingThree/_heroThree.scss";
+@import "pages/landingThree/_aboutThree.scss";
+@import "pages/landingThree/_servicesThree.scss";
+@import "pages/landingThree/_testimonialsThree.scss";
+@import "pages/landingThree/_customersThree.scss";
+@import "pages/landingThree/_contactUsThree.scss";
+// ======== END:: IMPORTING LANDING THREE COMPONENTS STYLES ======== //
+
+
+// ======== START:: IMPORTING RTL STYLES ======== //
+@import "globals/_rtl.scss";
+// ======== END:: IMPORTING RTL STYLES ======== //

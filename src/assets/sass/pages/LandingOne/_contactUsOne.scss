@@ -1,0 +1,91 @@
+.contact_us_one {
+    padding-block: 60px;
+
+    .section_image_wrapper {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform: translateX(-100px);
+
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     top: -40px;
+        //     left: -70px;
+        //     display: block;
+        //     width: 100%;
+        //     height: 100%;
+        //     background-image: linear-gradient(45deg, var(--main_theme_clr) ,var(--mid_main_theme_clr), var(--light_main_theme_clr));
+        //     @include borderRadius(10px);
+        //     z-index: 1;
+        // }
+
+        // &::after {
+        //     content: "";
+        //     position: absolute;
+        //     top: 30px;
+        //     right: -40px;
+        //     display: block;
+        //     width: 100%;
+        //     height: 100%;
+        //     border: 2px solid var(--mid_main_theme_clr);
+        //     @include borderRadius(10px);
+        //     z-index: 2;
+        // }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            @include borderRadius(10px);
+            z-index: 3;
+        }
+    }
+
+    .contact_form_wrapper {
+        .title_wrapper {
+            @include headerStyleOne;
+            h2 {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            span {
+                left: 40%;
+                transform: translateX(-44%) rotate(55deg);
+            }
+        }
+
+        .subtitle {
+            @include textWraper;
+            text-align: center;
+            line-height: 1.2;
+            font-size: 22px;
+        }
+    }
+
+    // START:: MEDIA QUERIES
+    @media ( max-width: 767px ) {
+        padding-top: 0;
+        .section_image_wrapper {
+            display: none;
+        }
+
+        .contact_form_wrapper {
+            .title_wrapper {
+                margin-bottom: 0;
+                h2 {
+                    left: 85px;
+                    font-size: 35px;
+                }
+                span {
+                    left: 25px;
+                }
+            }
+        }
+    }
+    // END:: MEDIA QUERIES
+}

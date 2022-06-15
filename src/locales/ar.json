@@ -1,0 +1,89 @@
+{
+    "iziToastConfigs": {
+        "position": "bottomRight",
+        "dir": "true"
+    },
+
+    "NAVBAR": {
+        "home": "الرئيسية",
+        "about_us": "من نحن",
+        "services": "خدماتنا",
+        "testimonials": "اراء عملائنا",
+        "customers": "عملائنا",
+        "contact_us": "تواصل معنا",
+        "english": "الإنجليزية",
+        "arabic": "العربية"
+    },
+
+    "TOOLTIPS": {
+        "search": "بحث",
+        "change_theme": "تغيير الألوان"
+    },
+
+    "STATUS": {
+    },
+
+    "FOOTER": {
+        "home": "الرئيسية",
+        "about_us": "من نحن",
+        "services": "خدماتنا",
+        "testimonials": "اراء عملائنا",
+        "customers": "عملائنا"
+    },
+
+    "TITLES": {
+        "about_us": "من نحن",
+        "about_us_html": "<h2>وكالة <span>ترجمة</span> عظيمة تبني أفضل تجربة</h2>",
+        "our_services": "خدماتنا",
+        "our_services_html": "<h2> <span>الخدمات</span> التي نقدمها لعملائنا</h2>",
+        "what_clients_say": "اراء عملائنا",
+        "what_clients_say_html": "<h2> اراء <span>عملائنا</span> </h2> ",
+        "our_customers": "عملائنا",
+        "our_customers_html": "<h2> <span> شركاء </span> النجاح </h2>",
+        "contact_us": "تواصل معنا",
+        "contact_us_html": "<h2> <span>تواصل</span> معنا </h2>",
+        "essential_links": "روابط مفيدة",
+        "services": "خدماتنا",
+        "free_quote": "احصل علي إقتباس مجاني",
+        "translation": "ترجمة",
+        "professional_translation_service": "عروض خدمات ترجمة احترافية",
+        "our_language": "لغاتنا",
+        "industries_we_cover": "المجالات التي نغطيها"
+    },
+
+    "BUTTONS": {
+        "start_now": "إبدء الان",
+        "send": "إرسال",
+        "request_quote": "إطلب إقتباس",
+        "free_quote": "إقتباس مجاني"
+    },
+
+    "TABS": {
+    },
+
+    "PLACEHOLDERS": {
+        "search": "بحث",
+        "name": "الإسم",
+        "email": "البريد الإلكتروني",
+        "message": "اكتب رسالتك",
+        "services": "الخدمات",
+        "lang_from": "من لغة",
+        "lang_to": "إلي لغة",
+        "phone": "رقم الهاتف",
+        "company_name": "إسم الشركة"
+    },
+
+    "VALIDATION": {
+        "name": "حقل الإسم لايمكن ان يكون فارغ",
+        "companyName": "حقل إسم الشركة لايمكن ان يكون فارغ",
+        "email": "حقل البريد الإلكتروني لايمكن ان يكون فارغ",
+        "phone": "حقل رقم الهاتف لايمكن ان يكون فارغ",
+        "message": "حقل  الرسالة لايمكن ان يكون فارغ",
+        "service": "حقل الخدمة لايمكن ان يكون فارغ ",
+        "lang": "يجب تحديد اللغة"
+    },
+
+    "MESSAGES": {
+        "sent_successfully": "تم الإرسال بنجاح"
+    }
+}

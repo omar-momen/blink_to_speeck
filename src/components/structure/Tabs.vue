@@ -1,0 +1,40 @@
+<template>
+    <div class="tabs_wrapper custom_card">
+        <v-card>
+            <v-tabs v-model="tab" background-color="primary" dark>
+                <v-tab v-for="item in tabsContent" :key="item.tab">
+                    {{ item.tab }}
+                </v-tab>
+            </v-tabs>
+
+            <v-tabs-items v-model="tab">
+                <v-tab-item
+                    v-for="item in tabsContent"
+                    :key="item.tab"
+                    :transition="'fadeInUp'"
+                    :reverse-transition="true"
+                    :hide-on-leave="true"
+                    mode="out-in"
+                >
+                    <v-card flat>
+                        <slot :name="item.key_name"> </slot>
+                    </v-card>
+                </v-tab-item>
+            </v-tabs-items>
+        </v-card>
+    </div>
+</template>
+
+<script>
+export default {
+    name: "Tabs",
+
+    props: ["tabsContent"],
+
+    data() {
+        return {
+            tab: null,
+        };
+    },
+};
+</script>
