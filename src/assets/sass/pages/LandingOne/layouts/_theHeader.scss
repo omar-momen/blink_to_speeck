@@ -1,394 +1,398 @@
 .landing_one_header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding-block: 10px;
-    background-color: transparent;
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-block: 10px;
+  background-color: transparent;
+  z-index: 1;
 
-    &.sticky_navbar {
-        z-index: 2;
-        animation: fixedAnimation 0.5s forwards;
+  &.sticky_navbar {
+    z-index: 2;
+    animation: fixedAnimation 0.5s forwards;
+  }
+  .navbar_wrapper {
+    @include flexSpaceBetweenAlignment;
+    column-gap: 25px;
+
+    .logo_wrapper {
+      @include flexStartAlignment;
+      column-gap: 35px;
+
+      img {
+        height: 100px;
+      }
     }
-    .navbar_wrapper {
+
+    .links_wrapper {
+      @include flexCenterAlignment;
+      column-gap: 35px;
+
+      .navbar_links_wrapper {
+        list-style: none;
+        margin: 0;
+        padding: 0;
         @include flexSpaceBetweenAlignment;
-        column-gap: 25px;
-
-        .logo_wrapper {
-            @include flexStartAlignment;
-            column-gap: 35px;
-        }
-
-        .links_wrapper {
-            @include flexCenterAlignment;
-            column-gap: 35px;
-
-            .navbar_links_wrapper {
-                list-style: none;
-                margin: 0;
-                padding: 0;
-                @include flexSpaceBetweenAlignment;
-                column-gap: 50px;
-                .navbar_link {
-                    button, 
-                    a {
-                        position: relative;
-                        text-decoration: none;
-                        font-size: 18px;
-                        font-family: $bold_font;
-                        color: var(--theme_text_clr);
-                        @include transitioning(0.4s);
-                        &:hover,
-                        &.active {
-                            color:  var(--theme_text_clr);
-                            &::after {
-                                content: "";
-                                position: absolute;
-                                top: 100%;
-                                left: 0;
-                                display: block;
-                                width: 100%;
-                                height: 2px;
-                                background-color: var(--theme_text_clr);
-                                @include heighShadow;
-                                @include transitioning(0.4s);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        .navbar_btns_wrapper {
-            @include flexCenterAlignment;
-            column-gap: 20px;
-            a {
-                position: relative;
-                text-decoration: none;
-                font-size: 18px;
-                font-family: $bold_font;
-                color: var(--theme_text_clr);
-                padding: 4px 10px;
-                .badge {
-                    padding: 0;
-                    position: absolute;
-                    top: -8px;
-                    right: 2px;
-                    display: block;
-                    min-width: 17px;
-                    height: 17px;
-                    font-size: 12px;
-                    color: var(--white_clr);
-                    background-color: var(--main_theme_clr);
-                    @include borderRadius(50%);
-                    @include flexCenterAlignment;
-                }
-                .toolTip {
-                    position: absolute;
-                    bottom: -35px;
-                    left: 0;
-                    right: 0;
-                    width: max-content;
-                    padding: 0 8px;
-                    font-size: 18px;
-                    font-family: $medium_font;
-                    background-color: var(--theme_bg_clr);
-                    color: var(--theme_text_clr);
-                    @include simpleShadow;
-                    @include borderRadius(8px);
-                    z-index: 10;
-                    @include transitioning(0.3s);
-                    transform-origin: top;
-                    transform: scale(0);
-                    opacity: 0;
-                }
-                &:hover {
-                    .toolTip {
-                        transform: scale(1);
-                        opacity: 1;
-                    }
-                }
-                &.my_courses_route {
-                    @include softButtonStyle(var(--soft_main_theme_clr));
-                }
-            }
-
-            button {
-                .badge {
-                    padding: 0;
-                    position: absolute;
-                    top: -8px;
-                    right: 2px;
-                    display: block;
-                    min-width: 17px;
-                    height: 17px;
-                    font-size: 12px;
-                    color: var(--white_clr);
-                    background-color: var(--main_theme_clr);
-                    @include borderRadius(50%);
-                    @include flexCenterAlignment;
-                }
-                .toolTip {
-                    position: absolute;
-                    bottom: -35px;
-                    left: 0;
-                    right: 0;
-                    width: max-content; 
-                    padding: 0 8px;
-                    font-size: 18px;
-                    font-family: $medium_font;
-                    background-color: var(--theme_bg_clr);
-                    color: var(--theme_text_clr);
-                    @include simpleShadow;
-                    @include borderRadius(8px);
-                    z-index: 10;
-                    @include transitioning(0.3s);
-                    transform-origin: top;
-                    transform: scale(0);
-                    opacity: 0;
-                }
-                &:hover {
-                    .toolTip {
-                        transform: scale(1);
-                        opacity: 1;
-                    }
-                }
-                &.theme_changer,
-                &.location_button {
-                    position: relative;
-                    svg, 
-                    i {
-                        color: var(--theme_text_clr);
-                        font-size: 25px;
-                    }
-                }
-                &.small_screens_navbar_toggeler {
-                    display: none;
-                }
-            }
-
-            .search_form {
-                .search_input_wrapper {
-                    background-color: transparent;
-                    border-bottom: 1px solid var(--theme_text_clr);
-                    @include flexStartAlignment;
-
-                    .search_btn {
-                        svg, 
-                        i {
-                            font-size: 25px;
-                            color: var(--theme_text_clr);
-                        }
-                    }
-
-                    input {
-                        border: none;
-                        background-color: transparent;
-                        padding-inline-start: 0;
-                        padding-bottom: 2px;
-                    }
-                }
-            }
-
-            .lang_menu_wrapper {
-                position: relative;
-                .lang_menu_btn {
-                    .selected_lang_wrapper {
-                        @include flexCenterAlignment;
-                        column-gap: 8px;
-                        .icons_wrapper {
-                            @include flexCenterAlignment;
-                            column-gap: 8px;
-                            span {
-                                svg, 
-                                i {
-                                    color: var(--theme_text_clr);
-                                    font-size: 25px;
-                                    transform-origin: center;
-                                    @include transitioning(0.4s);
-                                    &.rotate_arrow {
-                                        transform: rotate(180deg);
-                                    }
-                                }
-                            }
-                        }
-                        .lang_flag_wrapper {
-                            margin-bottom: 5px;
-                            img {
-                                object-fit: cover;
-                            }
-                        }
-                    }
-                }
-                .user_profile_menu {
-                    position: absolute;
-                    top: 130%;
-                    left: 0;
-                    margin: 0;
-                    padding: 0;
-                    list-style: none;
-                    width: max-content;
-                    background-color: var(--theme_bg_clr);
-                    @include borderRadius(10px);
-                    @include simpleShadow;
-                    z-index: 31;
-                    overflow: hidden;
-
-                    .lang_menu_item {
-                        @include transitioning(0.4s);
-                        &:hover {
-                            background-color: var(--soft_main_theme_clr);
-                        }
-                        &:not(:last-of-type) {
-                            border-bottom: 1px solid var(--very_light_theme_clr);
-                        }
-                        a, 
-                        button {
-                            text-decoration: none;
-                            display: block;
-                            width: 100%;
-                            text-align: center;
-                            padding: 6px 15px;
-                            color: var(--theme_text_clr);
-                            font-size: 18px;
-                            font-family: $medium_font;
-
-                            .lang_wrapper {
-                                @include flexCenterAlignment;
-                                column-gap: 10px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .small_screens_navbar_wrapper {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.8);
-        backdrop-filter: blur(4px);
-        z-index: 20;
-        @include flexCenterAlignment;
-        @include transitioning(0.5s);
-
-        &.active {
-            left: 0;
-        }
-
-        .close_btn {
-            position: absolute;
-            top: 25px;
-            left: 25px;
-            svg, 
-            i {
-                color: var(--white_clr);
-                font-size: 25px;
+        column-gap: 50px;
+        .navbar_link {
+          button,
+          a {
+            position: relative;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: $bold_font;
+            color: var(--theme_text_clr);
+            @include transitioning(0.4s);
+            &:hover,
+            &.active {
+              color: var(--theme_text_clr);
+              &::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 0;
+                display: block;
+                width: 100%;
+                height: 2px;
+                background-color: var(--theme_text_clr);
+                @include heighShadow;
                 @include transitioning(0.4s);
+              }
             }
-            
-            &:hover {
-                svg, 
+          }
+        }
+      }
+    }
+
+    .navbar_btns_wrapper {
+      @include flexCenterAlignment;
+      column-gap: 20px;
+      a {
+        position: relative;
+        text-decoration: none;
+        font-size: 18px;
+        font-family: $bold_font;
+        color: var(--theme_text_clr);
+        padding: 4px 10px;
+        .badge {
+          padding: 0;
+          position: absolute;
+          top: -8px;
+          right: 2px;
+          display: block;
+          min-width: 17px;
+          height: 17px;
+          font-size: 12px;
+          color: var(--white_clr);
+          background-color: var(--main_theme_clr);
+          @include borderRadius(50%);
+          @include flexCenterAlignment;
+        }
+        .toolTip {
+          position: absolute;
+          bottom: -35px;
+          left: 0;
+          right: 0;
+          width: max-content;
+          padding: 0 8px;
+          font-size: 18px;
+          font-family: $medium_font;
+          background-color: var(--theme_bg_clr);
+          color: var(--theme_text_clr);
+          @include simpleShadow;
+          @include borderRadius(8px);
+          z-index: 10;
+          @include transitioning(0.3s);
+          transform-origin: top;
+          transform: scale(0);
+          opacity: 0;
+        }
+        &:hover {
+          .toolTip {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+        &.my_courses_route {
+          @include softButtonStyle(var(--soft_main_theme_clr));
+        }
+      }
+
+      button {
+        .badge {
+          padding: 0;
+          position: absolute;
+          top: -8px;
+          right: 2px;
+          display: block;
+          min-width: 17px;
+          height: 17px;
+          font-size: 12px;
+          color: var(--white_clr);
+          background-color: var(--main_theme_clr);
+          @include borderRadius(50%);
+          @include flexCenterAlignment;
+        }
+        .toolTip {
+          position: absolute;
+          bottom: -35px;
+          left: 0;
+          right: 0;
+          width: max-content;
+          padding: 0 8px;
+          font-size: 18px;
+          font-family: $medium_font;
+          background-color: var(--theme_bg_clr);
+          color: var(--theme_text_clr);
+          @include simpleShadow;
+          @include borderRadius(8px);
+          z-index: 10;
+          @include transitioning(0.3s);
+          transform-origin: top;
+          transform: scale(0);
+          opacity: 0;
+        }
+        &:hover {
+          .toolTip {
+            transform: scale(1);
+            opacity: 1;
+          }
+        }
+        &.theme_changer,
+        &.location_button {
+          position: relative;
+          svg,
+          i {
+            color: var(--theme_text_clr);
+            font-size: 25px;
+          }
+        }
+        &.small_screens_navbar_toggeler {
+          display: none;
+        }
+      }
+
+      .search_form {
+        .search_input_wrapper {
+          background-color: transparent;
+          border-bottom: 1px solid var(--theme_text_clr);
+          @include flexStartAlignment;
+
+          .search_btn {
+            svg,
+            i {
+              font-size: 25px;
+              color: var(--theme_text_clr);
+            }
+          }
+
+          input {
+            border: none;
+            background-color: transparent;
+            padding-inline-start: 0;
+            padding-bottom: 2px;
+          }
+        }
+      }
+
+      .lang_menu_wrapper {
+        position: relative;
+        .lang_menu_btn {
+          .selected_lang_wrapper {
+            @include flexCenterAlignment;
+            column-gap: 8px;
+            .icons_wrapper {
+              @include flexCenterAlignment;
+              column-gap: 8px;
+              span {
+                svg,
                 i {
-                    color: var(--mid_red_clr);
-                    transform: rotate(90deg) scale(1.1);
+                  color: var(--theme_text_clr);
+                  font-size: 25px;
+                  transform-origin: center;
+                  @include transitioning(0.4s);
+                  &.rotate_arrow {
+                    transform: rotate(180deg);
+                  }
                 }
+              }
             }
+            .lang_flag_wrapper {
+              margin-bottom: 5px;
+              img {
+                object-fit: cover;
+              }
+            }
+          }
         }
+        .user_profile_menu {
+          position: absolute;
+          top: 130%;
+          left: 0;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          width: max-content;
+          background-color: var(--theme_bg_clr);
+          @include borderRadius(10px);
+          @include simpleShadow;
+          z-index: 31;
+          overflow: hidden;
 
-        .small_screens_links {
-            list-style: none;
-            padding: 0;
-            margin-top: 50px;
-            li {
-                text-align: center;
-                padding-block: 8px;
-                a, 
-                button {
-                    text-decoration: none;
-                    font-size: 25px;
-                    font-family: $medium_font;
-                    color: var(--white_clr);
-                    @include transitioning(0.4s);
-                    &:hover,
-                    &.router-link-exact-active {
-                        color: var(--main_theme_clr);
-                    }
-                }
+          .lang_menu_item {
+            @include transitioning(0.4s);
+            &:hover {
+              background-color: var(--soft_main_theme_clr);
             }
+            &:not(:last-of-type) {
+              border-bottom: 1px solid var(--very_light_theme_clr);
+            }
+            a,
+            button {
+              text-decoration: none;
+              display: block;
+              width: 100%;
+              text-align: center;
+              padding: 6px 15px;
+              color: var(--theme_text_clr);
+              font-size: 18px;
+              font-family: $medium_font;
+
+              .lang_wrapper {
+                @include flexCenterAlignment;
+                column-gap: 10px;
+              }
+            }
+          }
         }
+      }
+    }
+  }
+
+  .small_screens_navbar_wrapper {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+    z-index: 20;
+    @include flexCenterAlignment;
+    @include transitioning(0.5s);
+
+    &.active {
+      left: 0;
     }
 
-    // START:: MEDIA QUERIES
-    @media (max-width: 767px) {
-        .navbar_wrapper {
-            .logo_and_links_wrapper {
-                .logo_wrapper {
-                    img {
-                        width: 71px;
-                        height: 57px;
-                    }
-                }
-            }
-            .links_wrapper {
-                display: none;
-            }
+    .close_btn {
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      svg,
+      i {
+        color: var(--white_clr);
+        font-size: 25px;
+        @include transitioning(0.4s);
+      }
 
-            .navbar_btns_wrapper {
-                a {
-                    &.login_route,
-                    &.register_route ,
-                    &.chats_route,
-                    &.strengthening_requests,
-                    &.my_courses_route,
-                    &.add_subject_route {
-                        display: none;
-                    }
-                }
-                button {
-                    // &.theme_changer {
-                    //     width: 40px;
-                    //     height: 40px;
-                    //     svg,
-                    //     i {
-                    //         font-size: 18px;
-                    //     }
-                    // }
-
-                    &.small_screens_navbar_toggeler {
-                        font-size: 25px;
-                        color: var(--theme_text_clr);
-                        @include flexCenterAlignment;
-                    }
-                }
-
-                .search_form {
-                    display: none;
-                }
-            }
+      &:hover {
+        svg,
+        i {
+          color: var(--mid_red_clr);
+          transform: rotate(90deg) scale(1.1);
         }
+      }
     }
-    // END:: MEDIA QUERIES
+
+    .small_screens_links {
+      list-style: none;
+      padding: 0;
+      margin-top: 50px;
+      li {
+        text-align: center;
+        padding-block: 8px;
+        a,
+        button {
+          text-decoration: none;
+          font-size: 25px;
+          font-family: $medium_font;
+          color: var(--white_clr);
+          @include transitioning(0.4s);
+          &:hover,
+          &.router-link-exact-active {
+            color: var(--main_theme_clr);
+          }
+        }
+      }
+    }
+  }
+
+  // START:: MEDIA QUERIES
+  @media (max-width: 767px) {
+    .navbar_wrapper {
+      .logo_and_links_wrapper {
+        .logo_wrapper {
+          img {
+            width: 71px;
+            height: 57px;
+          }
+        }
+      }
+      .links_wrapper {
+        display: none;
+      }
+
+      .navbar_btns_wrapper {
+        a {
+          &.login_route,
+          &.register_route,
+          &.chats_route,
+          &.strengthening_requests,
+          &.my_courses_route,
+          &.add_subject_route {
+            display: none;
+          }
+        }
+        button {
+          // &.theme_changer {
+          //     width: 40px;
+          //     height: 40px;
+          //     svg,
+          //     i {
+          //         font-size: 18px;
+          //     }
+          // }
+
+          &.small_screens_navbar_toggeler {
+            font-size: 25px;
+            color: var(--theme_text_clr);
+            @include flexCenterAlignment;
+          }
+        }
+
+        .search_form {
+          display: none;
+        }
+      }
+    }
+  }
+  // END:: MEDIA QUERIES
 }
 
 // START:: ANIMATIONS KEYFRAMES
 @keyframes fixedAnimation {
-    0% {
-        position: fixed;
-        top: -100%;
-        width: 100%;
-    }
+  0% {
+    position: fixed;
+    top: -100%;
+    width: 100%;
+  }
 
-    100% {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        border-bottom: 2px solid var(--soft_main_theme_clr);
-    }
+  100% {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-bottom: 2px solid var(--soft_main_theme_clr);
+  }
 }
 // END:: ANIMATIONS KEYFRAMES

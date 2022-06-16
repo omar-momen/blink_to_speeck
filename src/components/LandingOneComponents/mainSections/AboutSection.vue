@@ -12,11 +12,13 @@
         <!-- START:: SECTION TEXT -->
         <div class="col-lg-6 order-2 order-md-1">
           <div class="text_wrapper">
-            our app comes to help those people listen and communicate by
-            providing a portable and affordable solution for understanding sign
-            language by developing a mobile application that precedes a way for
-            sign language recognition using computer vision tech nology to
-            translate signs into arabic language.
+            We are a group of students from the Faculty of Computers and
+            Information, Mansoura University, consisting of 10 individuals
+            working in different fields. We designed this application in the
+            final semester of our university life, leaving a trail that speaks
+            for us. We work in the fields of artificial intelligence,
+            application development, web pages and graphic design, and we strive
+            to always provide the best.
           </div>
         </div>
         <!-- START:: SECTION TEXT -->

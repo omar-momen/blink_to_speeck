@@ -7,17 +7,22 @@
         <div class="col-md-6 order-2 order-md-1">
           <div class="hero_text_wrapper">
             <!-- ********** START:: TITLE ********** -->
-            <h1 class="hero_title">Blink To Live</h1>
+            <!-- START:: SECTION TITLE -->
+            <div class="title_wrapper">
+              <h2>Blink To Live</h2>
+            </div>
+            <!-- END:: SECTION TITLE -->
             <!-- ********** END:: TITLE ********** -->
 
             <!-- ********** START:: DESC ********** -->
 
             <div class="text_wrapper">
-              our app comes to help those people listen and communicate by
-              providing a portable and affordable solution for understanding
-              sign language by developing a mobile application that precedes a
-              way for sign language recognition using computer vision tech
-              nology to translate signs into arabic language.
+              Communication is often a challenge for paralyzed patients, whose
+              families and caregivers struggle to understand their feelings and
+              needs, since they can only communicate through their eyes, we plan
+              a blink of an eye to live, and this app is based on a language
+              specially developed to help those. People and patients whose minds
+              are on alert.
             </div>
             <!-- ********** END:: DESC ********** -->
 
